@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root {
+    --base: #f6eee3;
+    --enfasis: #2e5557;
+    --secundario: #f8c50c;
+    --text-input-field: #F7F7F7;
+    --hospital-green: #ACD9B2;
+    --sm: 14px;
+    --md: 16px;
+    --lg: 18px;
+  }
+  .inactive{
+    display: none;
+  }
+  body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--base);
+  }
+  /* Nav Bar General */
+  nav{
+    background-color: var(--enfasis);
+    display: flex;
+    justify-content: center;
+    padding: 0 2px;
+    height: 60px;
+    border-bottom: 1px solid var(--secundario);
+  }
+  .burguer-menu {
+    display: none;
+  }
+  .logo {
+    position: absolute;
+    left: 48px;
+    top: 4px;
+    width: 50px;
+    height: 50px;
+  }
+  .navbar{
+    display: flex;
+  }
+  .navbar ul {
+    margin-left: 12px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar li a{
+    display: block;
+    text-decoration: none;
+    color: var(--base);
+    padding: 6px 20px;
+    border-radius: 16px;
+  }
+  .navbar ul li a:hover{
+    /* border: 1px solid var(--secundario); */
+    color: var(--secundario);
+  }
+ /* Section HERO */
+ .hero{
+  margin: 40px 24px 0 24px;
+ }
+
+
+  @media (max-width: 768px) {
+    .burguer-menu{
+      display: block;
+    }
+    .navbar ul{
+      display: none;
+    }
+    .logo{
+      /* hacer display relativo otra vez y centrar con Flex */
+      width: 90px;
+      height: 90px;
+      left: 40%;
+      top: 10px;
+    }
+    /* grid productos */
+    .cards-container {
+      grid-template-columns: repeat(auto-fill, 140px);
+    }
+    .product-card {
+      width: 140px;
+    }
+    .product-card img {
+      width: 140px;
+      height: 140px;
+    }
+    /* Product Detail */
+    #productDetail {
+      width: 100%;
+    }
+  }
